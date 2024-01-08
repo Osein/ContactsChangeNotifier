@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
 
   s.author             = { 'Yonat Sharon' => 'yonat@ootips.org' }
 
-  s.platform     = :ios, '15.0'
+  s.platform     = :ios, '12.0'
   s.swift_versions = ['5.0']
 
   s.source       = { :git => 'https://github.com/yonat/ContactsChangeNotifier.git', :tag => s.version }
