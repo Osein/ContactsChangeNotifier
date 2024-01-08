@@ -11,6 +11,7 @@ import UIKit
 import ContactStoreChangeHistory
 #endif
 
+@available(iOS 13.0, *)
 public extension Notification {
     internal static let contactsChangeEventsKey = "ContactsChangeEvents"
 
@@ -20,6 +21,7 @@ public extension Notification {
     }
 }
 
+@available(iOS 13.0, *)
 public extension CNChangeHistoryFetchRequest {
     /// Creates a request with sensible defaults:
     /// Only retrieve contact identifiers, and ignore changes with the `transactionAuthor == Bundle.main.bundleIdentifier`.
@@ -55,6 +57,7 @@ public extension CNChangeHistoryFetchRequest {
 ///     )
 /// }
 /// ```
+@available(iOS 13.0, *)
 open class ContactsChangeNotifier: NSObject {
     /// Posted when *external* changes occur in Contacts (i.e., changes made outside the app). Includes `contactsChangeEvents` with all changes.
     ///
@@ -180,6 +183,7 @@ open class ContactsChangeNotifier: NSObject {
 }
 
 // Applies to .CNContactStoreDidChange
+@available(iOS 13.0, *)
 private extension Notification {
     /// (Undocumented) Did the change originate outside the app
     var contactsStoreChangeExternal: Bool {
